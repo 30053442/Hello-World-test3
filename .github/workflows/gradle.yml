@@ -1,0 +1,21 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [opend,reopend] #必要に応じて適宜削除する。
+    branches: [ main ]
+
+
+jobs: 
+
+  SonarQube_on_windows2016:
+  
+    runs-on: [self-hosted, windows, x64]
+    
+    steps:
+      uses: actions/checkout@v2
+    - name: SonarQube Scan
+      run: ./gradlew sonarqube -Dsonar.projectKey=test-20220414 -Dsonar.host.url=http://10.14.3.121:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4
+      shell: cmd
