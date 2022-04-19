@@ -1,0 +1,30 @@
+name: Java CI with Gradle
+ 
+on:
+  push:
+    branches: 
+      - main 
+      - develop/feature
+  pull_request:
+    types: [closed,assigned,opend,reopend]
+    branches:
+      - main
+      - develop/feature
+
+jobs: 
+ 
+  SonarQube_on_windows2016:
+  
+    runs-on: [self-hosted, windows, x64]
+    
+    steps:
+    - name: SonarQubeTrigger
+      uses: actions/checkout@master
+    - name: SonarQube Scan
+      run: .\gradlew.bat sonarqube -Dsonar.projectKey=branchKey-test1 -Dsonar.host.url=http://10.14.2.69:9007 -Dsonar.login=8663b3bc95bf4716087319dbf0e600eb62dbff61
+      shell: cmd
+      #Add self-hosted runner on the same host
+      #Add feature branch
+      #Change projectKey branchKey-test1
+      #Delete feature and Add develop/feature
+      #Share with DERMS members 20210629

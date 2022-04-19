@@ -1,0 +1,6 @@
+projectKey=gradle-multimodule-test1
+serverUrl=http://10.14.2.69:9007
+serverVersion=8.9.0.43852
+dashboardUrl=http://10.14.2.69:9007/dashboard?id=gradle-multimodule-test1
+ceTaskId=AXwp6FkbeDbjCYBMq93o
+ceTaskUrl=http://10.14.2.69:9007/api/ce/task?id=AXwp6FkbeDbjCYBMq93o
