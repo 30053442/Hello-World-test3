@@ -4,7 +4,7 @@ on:
     branches:
      - main 
   pull_request:
-    types: [opend,reopend]　#必要に応じて、適宜削除する。
+    types: [opend,reopend]
     branches:
      - main 
 
@@ -15,8 +15,6 @@ jobs:
     runs-on: [self-hosted, windows, x64]
     
     steps:
-      uses: actions/checkout@v2
-　　　run: mvn clean install package
-     - name: SonarQube Scan
-       run: mvn sonar:sonar -Dsonar.projectKey=maven-basic-test1(projectKey名) -Dsonar.host.url=http://10.14.2.69:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4 
-       shell: cmd
+    - uses: actions/checkout@v2
+    - run: mvn sonar:sonar -Dsonar.projectKey=20220414-test-maven -Dsonar.host.url=http://10.14.3.121:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4 
+      shell: cmd
