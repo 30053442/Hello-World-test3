@@ -1,0 +1,22 @@
+name: Java CI with Maven  
+on:
+  push:
+    branches:
+     - main 
+  pull_request:
+    types: [opend,reopend]　#必要に応じて、適宜削除する。
+    branches:
+     - main 
+
+jobs: 
+ 
+  SonarQube_on_windows2019:
+  
+    runs-on: [self-hosted, windows, x64]
+    
+    steps:
+      uses: actions/checkout@v2
+　　　run: mvn clean install package
+     - name: SonarQube Scan
+       run: mvn sonar:sonar -Dsonar.projectKey=test-20220425 -Dsonar.host.url=http://10.14.3.121:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4
+       shell: cmd
