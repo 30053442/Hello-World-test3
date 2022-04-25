@@ -17,5 +17,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: SonarQube Scan
-      run: .\gradlew.bat sonarqube -Dsonar.projectKey=test-20220425 -Dsonar.host.url=http://10.14.3.121:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4
+      run: gradlew.bat sonarqube -Dsonar.projectKey=test-20220425 -Dsonar.host.url=http://10.14.3.121:9007 -Dsonar.login=fd7b14980a317351fac28580d407d484ad54bfb4
       shell: cmd
