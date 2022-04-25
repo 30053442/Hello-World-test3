@@ -1,6 +1,0 @@
-projectKey=test-20220425
-serverUrl=http://10.14.3.121:9007
-serverVersion=8.9.1.44547
-dashboardUrl=http://10.14.3.121:9007/dashboard?id=test-20220425
-ceTaskId=AYBeDdtmqlTnaQPDLKt-
-ceTaskUrl=http://10.14.3.121:9007/api/ce/task?id=AYBeDdtmqlTnaQPDLKt-
