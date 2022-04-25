@@ -1,21 +1,16 @@
-# SonarQube Scanner for Gradle
+# Basic Maven Example
 
-This example demonstrates how to analyze a simple project built with [Gradle](https://gradle.org/).
-
-## Prerequisites
-
-* [SonarQube](http://www.sonarqube.org/downloads/) 7.9+
-* A gradle wrapper is included that bundles gradle. All other required plugins will be pulled by gradle as needed.
+This simple Maven project is importing JaCoCo's coverage report. For multi-module project example 
+see [multi-module Maven project](../maven-multimodule/README.md)
 
 ## Usage
 
-Run the following command (updating the sonar.host.url property as appropriate):
+* Build the project, execute all the tests and analyze the project with SonarQube Scanner for Maven(from root  of the project):
 
-* On Unix-like systems:
-  `./gradlew -Dsonar.host.url=http://myhost:9000 sonarqube`
-* On Windows:
-  `.\gradlew.bat -D'sonar.host.url=http://myhost:9000' sonarqube`
+```shell
+        mvn clean verify sonar:sonar
+```
 
-## Coverage
+## Documentation
 
-To get the project [test coverage](https://community.sonarsource.com/t/coverage-test-data-importing-jacoco-coverage-report-in-xml-format) computed, add gradle task `jacocoTestReport` to your command line.
+[SonarScanner for Maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)

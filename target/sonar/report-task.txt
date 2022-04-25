@@ -1,0 +1,6 @@
+projectKey=20220414-test-maven
+serverUrl=http://10.14.3.121:9007
+serverVersion=8.9.1.44547
+dashboardUrl=http://10.14.3.121:9007/dashboard?id=20220414-test-maven
+ceTaskId=AYBLEfRFqlTnaQPDLKtV
+ceTaskUrl=http://10.14.3.121:9007/api/ce/task?id=AYBLEfRFqlTnaQPDLKtV
