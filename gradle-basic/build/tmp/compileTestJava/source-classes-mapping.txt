@@ -1,0 +1,2 @@
+com/acme/AppTest.java
+ com.acme.AppTest
