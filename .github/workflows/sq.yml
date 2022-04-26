@@ -1,0 +1,21 @@
+name: SQ
+on:
+  push:
+    branches:
+      # - main
+      # - feature/Add_dir
+      #- feature/advanced_wf
+      - 'feature/*'
+jobs:
+  Scan:
+    runs-on: [self-hosted, windows, x64]
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: Run scanner
+      run: sonar-scanner.bat -D"sonar.projectKey=go-test" -D"sonar.sources=." -D"sonar.host.url=${{ env.SONAR_HOST_URL }}" -D"sonar.login=${{ env.SONAR_TOKEN }}"
+      shell: cmd
+      env:
+        #SONAR_PROJECT_KEY:
+        SONAR_HOST_URL: http://10.14.3.121:9007/
+        SONAR_TOKEN: fd7b14980a317351fac28580d407d484ad54bfb4
