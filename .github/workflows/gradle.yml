@@ -10,7 +10,7 @@ on:
 
 jobs: 
 
-  SonarQube_on_windows2019:
+  SonarQube_on_windows2016:
   
     runs-on: [self-hosted, windows, x64]
     
